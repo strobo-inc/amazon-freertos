@@ -738,6 +738,10 @@ WIFIReturnCode_t WIFI_SetMode( WIFIDeviceMode_t xDeviceMode )
                 ret = esp_wifi_set_mode(WIFI_MODE_AP);
                 xRetVal = (ret == ESP_OK) ? eWiFiSuccess : eWiFiFailure;
                 break;
+            case eWiFiModeAPStation:
+                ret = esp_wifi_set_mode(WIFI_MODE_APSTA);
+                xRetVal = (ret == ESP_OK) ? eWiFiSuccess : eWiFiFailure;
+                break;
             default:
                 xRetVal = eWiFiNotSupported;
                 break;
