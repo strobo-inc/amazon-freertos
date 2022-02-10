@@ -3,7 +3,7 @@ menu "FreeRTOS"
 config FREERTOS_UNICORE
     bool
     # Only single core mode is supported in FreeRTOS
-    default y
+    default n
     help
         This version of FreeRTOS normally takes control of all cores of 
         the CPU. Select this if you only want to start it on the first core.
